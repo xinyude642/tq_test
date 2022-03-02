@@ -1,0 +1,54 @@
+/*清除元素默认的内外边距  */
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+
+/*去掉列表前面的小点*/
+
+li {
+    list-style: none;
+}
+
+
+/*清除浮动*/
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: "";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+
+/*页面宽度*/
+
+.w {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+a {
+    color: #4f5457;
+    text-decoration: none;
+}
+
+
+/*让所有斜体 不倾斜*/
+
+em,
+i {
+    font-style: normal;
+}

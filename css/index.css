@@ -1,0 +1,368 @@
+/*头部导航*/
+
+.top_shortcut {
+    position: relative;
+    height: 100px;
+    background-color: #ffffff;
+}
+
+
+/*主体*/
+
+.main_part {
+    position: relative;
+    height: 1276px;
+    background-color: #f5f8f9;
+}
+
+
+/*图标样式*/
+
+.logo {
+    position: absolute;
+    width: 455px;
+    height: 68px;
+    top: 18px;
+    left: 150px;
+}
+
+.log_out {
+    position: absolute;
+    width: 105px;
+    height: 30px;
+    top: 30px;
+    right: 150px;
+}
+
+.logo a {
+    display: block;
+    height: 68px;
+    background: url(../image/logo.png) no-repeat;
+}
+
+.log_out a {
+    display: block;
+    width: 110px;
+    height: 40px;
+    background: url(../image/log_out.png) no-repeat;
+}
+
+.set,
+.info {
+    width: 20px;
+    height: 22px;
+}
+
+.set {
+    position: absolute;
+    right: 335px;
+    top: 39px;
+}
+
+.set a {
+    display: block;
+    width: 20px;
+    height: 22px;
+    background: url(../image/set.png) no-repeat;
+}
+
+.info {
+    position: absolute;
+    right: 298px;
+    top: 39px;
+}
+
+.info a {
+    display: block;
+    width: 20px;
+    height: 22px;
+    background: url(../image/info.png) no-repeat;
+}
+
+
+/*导航栏*/
+
+.navitems {
+    position: absolute;
+    right: 150px;
+    width: 560px;
+    height: 170px;
+}
+
+
+/*简介栏*/
+
+.overview {
+    position: absolute;
+    width: 560px;
+    height: 170px;
+    left: 150px;
+    line-height: 170px;
+}
+
+.overview p {
+    font-size: 22px;
+}
+
+.navitems ul li {
+    float: right;
+    font-weight: bold;
+}
+
+.navitems ul {
+    margin-top: 70px;
+}
+
+.navitems ul li a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 18px;
+}
+
+.navitems ul li a:hover {
+    color: orange;
+}
+
+
+/*轮播图*/
+
+.cir_banner {
+    position: absolute;
+    width: 540px;
+    height: 270px;
+    left: 150px;
+    top: 170px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.cir_banner .focus {
+    position: relative;
+    float: left;
+    width: 540px;
+    height: 270px;
+}
+
+.focus ul {
+    position: absolute;
+    width: 800%;
+}
+
+
+/*轮播图视窗*/
+
+.focus {
+    overflow: hidden;
+}
+
+.focus ul li {
+    float: left;
+}
+
+.cir_banner .focus img {
+    width: 540px;
+    height: 270px;
+}
+
+
+/*用户支持栏*/
+
+.support {
+    position: absolute;
+    right: 150px;
+    width: 560px;
+    height: 290px;
+    top: 170px;
+}
+
+.requests {
+    float: left;
+    width: 560px;
+    height: 109px;
+    line-height: 110px;
+    background-color: #ffffff;
+}
+
+.requests p {
+    float: left;
+    margin-left: 50px;
+    font-size: large;
+}
+
+.requests ul {
+    float: right;
+    margin-right: 50px;
+    margin-top: 40px;
+}
+
+.requests ul li a {
+    display: block;
+    width: 91px;
+    height: 36px;
+    line-height: 36px;
+    color: #7b7e80;
+    border: 2px solid #e9e9ea;
+    text-align: center;
+}
+
+
+/*用户栏*/
+
+.user {
+    position: absolute;
+    top: 110px;
+    width: 560px;
+    height: 180px;
+    background-color: #ffffff;
+}
+
+.user ul li {
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.user_status ul {
+    position: absolute;
+    right: 50px;
+}
+
+.user_status ul li a {
+    display: inline-block;
+    height: 30px;
+    width: 60px;
+    line-height: 30px;
+    background-color: #5dd054;
+    color: #f5f8f9;
+    text-align: center;
+}
+
+.user_time,
+.user_name,
+.user_status {
+    float: left;
+}
+
+
+/*曲线显示栏*/
+
+.Curve_display {
+    position: absolute;
+    width: 1140px;
+    height: 346px;
+    left: 150px;
+    top: 477px;
+    background-color: #ffffff;
+}
+
+
+/*饼状显示栏*/
+
+.Cakeshape_display {
+    position: absolute;
+    width: 560px;
+    height: 377px;
+    bottom: 53px;
+    left: 150px;
+    background-color: #ffffff;
+}
+
+
+/*柱状显示栏*/
+
+.Column_display {
+    position: absolute;
+    width: 560px;
+    height: 377px;
+    bottom: 53px;
+    right: 150px;
+    background-color: #ffffff;
+}
+
+
+/*曲线显示栏*/
+
+.footer {
+    position: relative;
+    height: 290px;
+    width: 1440px;
+    background-color: #202124;
+}
+
+
+/*轮播图左右按钮*/
+
+.left_btn,
+.right_btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 20px;
+    z-index: 2;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    display: none;
+}
+
+.right_btn {
+    right: 0;
+}
+
+
+/*轮播图下标*/
+
+.circle {
+    position: absolute;
+    left: 240px;
+    bottom: 10px;
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 6px;
+    background-color: #c0c4c6;
+}
+
+
+/*底部logo*/
+
+.foot_logo {
+    position: absolute;
+    top: 75px;
+}
+
+
+/*轮播图链接导航*/
+
+.foot_link {
+    position: absolute;
+    top: 75px;
+    left: 750px;
+    width: 1100px;
+    height: 215px;
+}
+
+.foot_link ul {
+    float: left;
+    margin-right: 110px;
+}
+
+.foot_link ul li {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.foot_link ul li a {
+    font-size: 18px;
+    color: #fff;
+}
