@@ -58,10 +58,12 @@ window.addEventListener('load', function() {
     right_btn.addEventListener('click', function() {
             if (flag == true) {
                 flag = false;
+                //6 0--5
                 if (num == ul.children.length - 1) {
                     //回到最初第一张 
                     ul.style.left = 0;
                     num = 0;
+
                 }
                 num++;
                 animate(ul, -num * focusWidth, function() {
@@ -73,14 +75,14 @@ window.addEventListener('load', function() {
                     ol.children[i].style.backgroundColor = '#c0c4c6';
                     ol.children[i].style.height = 8 + 'px';
                 }
-                //下标回到初始
+                //下标回到初始 5
                 if (num == ul.children.length - 1) {
                     ol.children[0].style.backgroundColor = '#fff';
                     ol.children[0].style.height = 14 + 'px';
+                } else {
+                    ol.children[num].style.backgroundColor = '#fff';
+                    ol.children[num].style.height = 14 + 'px';
                 }
-                ol.children[num].style.backgroundColor = '#fff';
-                ol.children[num].style.height = 14 + 'px';
-
             }
         })
         ////点击左侧按钮实现图片滚动

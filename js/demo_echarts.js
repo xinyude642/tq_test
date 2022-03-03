@@ -78,41 +78,51 @@ window.addEventListener('load', function() {
             }
         }]
     });
-    //获取周数据
-    $.ajax({
-            type: 'get',
-            url: 'https://edu.telking.com/api/?type=week',
-            async: true,
-            success: function(datas) {
-                var res = [];
-                var res_xAxis = datas.data.xAxis;
-                var res_series = datas.data.series;
-                ColumnChart.setOption({ xAxis: [{ data: datas.data.xAxis }] });
-                ColumnChart.setOption({ series: [{ data: datas.data.series }] });
-                CakeshapeChart.setOption({
-                    series: [{
-                        data: function() {
-                            for (var i = 0; i < res_xAxis.length; i++) {
-                                res.push({
-                                    value: res_series[i],
-                                    name: res_xAxis[i]
-                                });
-                            }
-                            return res;
-                        }()
-                    }]
-                });
-            }
-        })
-        //获取月数据
-    $.ajax({
-        type: 'get',
-        url: 'https://edu.telking.com/api/?type=month',
-        async: true,
-        success: function(datas) {
-            CurveChart.setOption({ xAxis: [{ data: datas.data.xAxis }] });
-            CurveChart.setOption({ series: [{ data: datas.data.series }] });
-        }
-    })
+    //获取数据
+    function get_data(type, url, async, charts_fun) {
 
+        var xhr = new XMLHttpRequest();
+        xhr.open(type, url, async);
+        xhr.send();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var result_data = JSON.parse(xhr.responseText);
+                if (charts_fun) {
+                    charts_fun(result_data);
+                }
+            }
+        }
+    }
+    //绘制曲线图
+    function CurveChart_fun(result_data) {
+        CurveChart.setOption({ xAxis: { data: result_data.data.xAxis } });
+        CurveChart.setOption({ series: { data: result_data.data.series } });
+    }
+    //绘制饼状图
+    function CakeshapeChart_fun(result_data) {
+        var res = [];
+        CakeshapeChart.setOption({
+            series: [{
+                data: function() {
+                    for (var i = 0; i < result_data.data.xAxis.length; i++) {
+                        res.push({
+                            value: result_data.data.series[i],
+                            name: result_data.data.xAxis[i]
+                        });
+                    }
+                    return res;
+                }()
+            }]
+        });
+
+    }
+    //绘制柱状图
+    function ColumnChart_fun(result_data) {
+        ColumnChart.setOption({ xAxis: { data: result_data.data.xAxis } });
+        ColumnChart.setOption({ series: { data: result_data.data.series } });
+    }
+    //绘制三种图形
+    get_data('get', 'https://edu.telking.com/api/?type=month', 'true', CurveChart_fun);
+    get_data('get', 'https://edu.telking.com/api/?type=week', 'true', CakeshapeChart_fun);
+    get_data('get', 'https://edu.telking.com/api/?type=week', 'true', ColumnChart_fun);
 })
