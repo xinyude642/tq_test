@@ -13,21 +13,6 @@ li {
 }
 
 
-/*清除浮动*/
-
-.clearfix:after {
-    visibility: hidden;
-    clear: both;
-    display: block;
-    content: "";
-    height: 0
-}
-
-.clearfix {
-    *zoom: 1
-}
-
-
 /*页面宽度*/
 
 .w {
@@ -43,12 +28,4 @@ img {
 a {
     color: #4f5457;
     text-decoration: none;
-}
-
-
-/*让所有斜体 不倾斜*/
-
-em,
-i {
-    font-style: normal;
 }

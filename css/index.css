@@ -1,62 +1,63 @@
-/*头部导航*/
+body {
+    background-color: #f5f8f9;
+    margin: 0 auto;
+}
 
-.top_shortcut {
-    position: relative;
+
+/*底部黑框*/
+
+.foot_black {
+    height: 40px;
+    background-color: #202124;
+}
+
+header {
+    width: 1440px;
     height: 100px;
+    margin: 0 auto;
     background-color: #ffffff;
 }
 
 
-/*主体*/
+/*头部栏*/
 
-.main_part {
-    position: relative;
-    height: 1276px;
-    background-color: #f5f8f9;
+.head_top {
+    width: 1140px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 
-/*图标样式*/
+/*底部栏*/
 
-.logo {
-    position: absolute;
-    width: 455px;
-    height: 68px;
-    top: 18px;
-    left: 150px;
+footer {
+    width: 1440px;
+    height: 250px;
+    background-color: #34393c;
+    margin: 0 auto;
 }
 
-.log_out {
-    position: absolute;
-    width: 105px;
-    height: 30px;
-    top: 30px;
-    right: 150px;
-}
-
-.logo a {
+.head_top h1 {
     display: block;
-    height: 68px;
-    background: url(../image/logo.png) no-repeat;
 }
 
-.log_out a {
-    display: block;
-    width: 110px;
-    height: 40px;
-    background: url(../image/log_out.png) no-repeat;
+.fr {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+
+/*设置，信息样式*/
 
 .set,
 .info {
     width: 20px;
     height: 22px;
-}
-
-.set {
-    position: absolute;
-    right: 335px;
-    top: 39px;
+    margin-left: 10px;
 }
 
 .set a {
@@ -66,12 +67,6 @@
     background: url(../image/set.png) no-repeat;
 }
 
-.info {
-    position: absolute;
-    right: 298px;
-    top: 39px;
-}
-
 .info a {
     display: block;
     width: 20px;
@@ -79,70 +74,90 @@
     background: url(../image/info.png) no-repeat;
 }
 
+.log_out {
+    width: 110px;
+    height: 40px;
+    margin-left: 10px;
+}
 
-/*导航栏*/
-
-.navitems {
-    position: absolute;
-    right: 150px;
-    width: 560px;
-    height: 170px;
+.log_out a {
+    display: block;
+    width: 110px;
+    height: 40px;
+    background: url(../image/log_out.png) no-repeat;
 }
 
 
-/*简介栏*/
+/*主体*/
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 1140px;
+    min-height: 1280px;
+    margin-bottom: 50px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 200px;
+    height: 80px;
+}
 
 .overview {
-    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 560px;
     height: 170px;
-    left: 150px;
-    line-height: 170px;
+    margin-right: 20px;
 }
 
 .overview p {
     font-size: 22px;
 }
 
+
+/*导航栏*/
+
+.navitems {
+    display: flex;
+    flex: 1;
+    height: 170px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .navitems ul li {
-    float: right;
-    font-weight: bold;
-}
-
-.navitems ul {
-    margin-top: 70px;
-}
-
-.navitems ul li a {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    font-size: 14px;
-    padding-left: 18px;
+    float: left;
+    margin-left: 10px;
+    padding-bottom: 10px;
 }
 
 .navitems ul li a:hover {
     color: orange;
+    border-bottom: 2px solid #C0EAFA;
 }
 
 
 /*轮播图*/
 
 .cir_banner {
-    position: absolute;
-    width: 540px;
-    height: 270px;
-    left: 150px;
-    top: 170px;
-    padding: 10px;
-    background-color: #fff;
+    position: relative;
+    width: 530px;
+    height: 250px;
+    margin-top: 10px;
+    border: 10px solid #fff;
 }
 
-.cir_banner .focus {
-    position: relative;
-    float: left;
-    width: 540px;
-    height: 270px;
+.focus {
+    position: absolute;
+    width: 530px;
+    height: 250px;
+    overflow: hidden;
 }
 
 .focus ul {
@@ -150,149 +165,35 @@
     width: 800%;
 }
 
-
-/*轮播图视窗*/
-
-.focus {
-    overflow: hidden;
-}
-
 .focus ul li {
     float: left;
 }
 
-.cir_banner .focus img {
-    width: 540px;
-    height: 270px;
+.cir_banner .focus ul li img {
+    width: 530px;
+    height: 250px;
 }
 
 
-/*用户支持栏*/
+/*轮播图下标*/
 
-.support {
+.circle {
     position: absolute;
-    right: 150px;
-    width: 560px;
-    height: 290px;
-    top: 170px;
+    left: 240px;
+    bottom: 10px;
 }
 
-.requests {
+.circle li {
     float: left;
-    width: 560px;
-    height: 109px;
-    line-height: 110px;
-    background-color: #ffffff;
-}
-
-.requests p {
-    float: left;
-    margin-left: 50px;
-    font-size: large;
-}
-
-.requests ul {
-    float: right;
-    margin-right: 50px;
-    margin-top: 40px;
-}
-
-.requests ul li a {
-    display: block;
-    width: 91px;
-    height: 36px;
-    line-height: 36px;
-    color: #7b7e80;
-    border: 2px solid #e9e9ea;
-    text-align: center;
+    width: 8px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 6px;
+    background-color: #c0c4c6;
 }
 
 
-/*用户栏*/
-
-.user {
-    position: absolute;
-    top: 110px;
-    width: 560px;
-    height: 180px;
-    background-color: #ffffff;
-}
-
-.user ul li {
-    height: 30px;
-    margin-top: 20px;
-    margin-left: 50px;
-}
-
-.user_status ul {
-    position: absolute;
-    right: 50px;
-}
-
-.user_status ul li a {
-    display: inline-block;
-    height: 30px;
-    width: 60px;
-    line-height: 30px;
-    background-color: #5dd054;
-    color: #f5f8f9;
-    text-align: center;
-}
-
-.user_time,
-.user_name,
-.user_status {
-    float: left;
-}
-
-
-/*曲线显示栏*/
-
-.Curve_display {
-    position: absolute;
-    width: 1140px;
-    height: 346px;
-    left: 150px;
-    top: 477px;
-    background-color: #ffffff;
-}
-
-
-/*饼状显示栏*/
-
-.Cakeshape_display {
-    position: absolute;
-    width: 560px;
-    height: 377px;
-    bottom: 53px;
-    left: 150px;
-    background-color: #ffffff;
-}
-
-
-/*柱状显示栏*/
-
-.Column_display {
-    position: absolute;
-    width: 560px;
-    height: 377px;
-    bottom: 53px;
-    right: 150px;
-    background-color: #ffffff;
-}
-
-
-/*曲线显示栏*/
-
-.footer {
-    position: relative;
-    height: 290px;
-    width: 1440px;
-    background-color: #202124;
-}
-
-
-/*轮播图左右按钮*/
+/*轮播图按钮*/
 
 .left_btn,
 .right_btn {
@@ -315,51 +216,148 @@
     right: 0;
 }
 
-
-/*轮播图下标*/
-
-.circle {
-    position: absolute;
-    left: 240px;
-    bottom: 10px;
-}
-
-.circle li {
-    float: left;
-    width: 8px;
-    height: 10px;
-    cursor: pointer;
-    margin: 0 6px;
-    background-color: #c0c4c6;
+.support {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 270px;
+    padding: 10px 0;
+    margin-left: 20px;
 }
 
 
-/*底部logo*/
+/*信息栏*/
 
-.foot_logo {
-    position: absolute;
-    top: 75px;
+.requests {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.requests p {
+    margin-left: 50px;
+    font-size: large;
+}
+
+.requests ul li a {
+    display: block;
+    margin-right: 50px;
+    width: 90px;
+    height: 36px;
+    line-height: 36px;
+    color: #7b7e80;
+    border: 2px solid #e9e9ea;
+    text-align: center;
+}
+
+.user {
+    margin-top: 1px;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.user_time {
+    margin-left: 50px;
+}
+
+.user_status {
+    margin-right: 50px;
+}
+
+.user_time,
+.user_name,
+.user_status {
+    margin-top: 30px;
+}
+
+.user_time li {
+    margin-bottom: 20px;
+}
+
+.user_name li {
+    margin-bottom: 20px;
+}
+
+.user_status li {
+    margin-bottom: 10px;
+}
+
+.user_status ul li a {
+    display: inline-block;
+    height: 30px;
+    width: 60px;
+    line-height: 30px;
+    background-color: #5dd054;
+    color: #f5f8f9;
+    text-align: center;
 }
 
 
-/*轮播图链接导航*/
+/*曲线显示栏*/
+
+.Curve_display {
+    width: 1140px;
+    height: 350px;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+
+/*饼状显示栏*/
+
+.Cakeshape_display {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 560px;
+    height: 380px;
+    background-color: #ffffff;
+}
+
+
+/*柱状显示栏*/
+
+.Column_display {
+    display: flex;
+    flex: 1;
+    height: 380px;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.bottom_column {
+    width: 1140px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+/*底部栏链接*/
 
 .foot_link {
-    position: absolute;
-    top: 75px;
-    left: 750px;
-    width: 1100px;
-    height: 215px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.foot_logo {
+    margin-right: 50px;
 }
 
 .foot_link ul {
-    float: left;
     margin-right: 110px;
 }
 
 .foot_link ul li {
-    display: block;
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .foot_link ul li a {

@@ -2,6 +2,7 @@ window.addEventListener('load', function() {
     var left_btn = this.document.querySelector('.left_btn');
     var right_btn = this.document.querySelector('.right_btn');
     var focus = this.document.querySelector('.focus');
+
     var ul = focus.querySelector('ul');
     var ol = focus.querySelector('.circle');
     var flag = true; //节流阀
@@ -26,6 +27,7 @@ window.addEventListener('load', function() {
         left_btn.style.display = 'none';
         right_btn.style.display = 'none';
         timer = setInterval(function() {
+
             //手动调用点击事件
             right_btn.click();
         }, 2000)
@@ -63,7 +65,6 @@ window.addEventListener('load', function() {
                     //回到最初第一张 
                     ul.style.left = 0;
                     num = 0;
-
                 }
                 num++;
                 animate(ul, -num * focusWidth, function() {
@@ -111,4 +112,19 @@ window.addEventListener('load', function() {
             ol.children[num].style.height = 14 + 'px';
         }
     })
+    var nav = this.document.getElementById('nav_ul');
+    // var nav_li = nav.children;
+    var nav_li_a = nav.getElementsByTagName('a');
+    nav.addEventListener('click', function() {
+        //清除链接下划线样式
+        for (var i = 0; i < nav_li_a.length; i++) {
+            nav_li_a[i].style.border = '0px';
+        }
+        //设置下划线
+        for (var i = 0; i < nav_li_a.length; i++) {
+            nav_li_a[i].onclick = function() {
+                this.style['border-bottom'] = '2px solid #C0EAFA';
+            }
+        }
+    }, true);
 })
