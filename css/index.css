@@ -62,15 +62,15 @@ footer {
 
 .set a {
     display: block;
-    width: 20px;
-    height: 22px;
+    width: 100%;
+    height: 100%;
     background: url(../image/set.png) no-repeat;
 }
 
 .info a {
     display: block;
-    width: 20px;
-    height: 22px;
+    width: 100%;
+    height: 100%;
     background: url(../image/info.png) no-repeat;
 }
 
@@ -82,8 +82,8 @@ footer {
 
 .log_out a {
     display: block;
-    width: 110px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background: url(../image/log_out.png) no-repeat;
 }
 
