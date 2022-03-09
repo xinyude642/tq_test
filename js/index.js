@@ -2,7 +2,6 @@ window.addEventListener('load', function() {
     var left_btn = this.document.querySelector('.left_btn');
     var right_btn = this.document.querySelector('.right_btn');
     var focus = this.document.querySelector('.focus');
-
     var ul = focus.querySelector('ul');
     var ol = focus.querySelector('.circle');
     var flag = true; //节流阀
@@ -113,7 +112,6 @@ window.addEventListener('load', function() {
         }
     })
     var nav = this.document.getElementById('nav_ul');
-    // var nav_li = nav.children;
     var nav_li_a = nav.getElementsByTagName('a');
     nav.addEventListener('click', function() {
         //清除链接下划线样式
